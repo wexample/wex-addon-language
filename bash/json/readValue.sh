@@ -9,7 +9,7 @@ jsonReadValueArgs() {
 
 jsonReadValue() {
   # Handle OS specific path
-  FILE=$(wex path/safe -p="${FILE}")
+  FILE=$(wex-exec path/safe -p="${FILE}")
   # Double slashes for windows like paths.
   FILE=$(echo "${FILE}" | sed 's/\\/\\\\/g')
   # Allow regex search patterns
