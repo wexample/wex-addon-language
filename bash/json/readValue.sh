@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 jsonReadValueArgs() {
- _ARGUMENTS=(
+ # shellcheck disable=SC2034
+  _ARGUMENTS=(
    'file f "File" true'
    'key k "Key to read" true'
  )
