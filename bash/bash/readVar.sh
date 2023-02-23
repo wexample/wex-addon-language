@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 bashReadVarArgs() {
+  # shellcheck disable=SC2034
   _DESCRIPTION="Read a value from a config file written as a list of bash variables"
   # shellcheck disable=SC2034
   _ARGUMENTS=(
