@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 phpConstantChangeArgs() {
- # shellcheck disable=SC2034
+  # shellcheck disable=SC2034
   _ARGUMENTS=(
-   'key k "Key" true'
-   'value v "Value" true'
-   'file f "File" true'
- )
+    'key k "Key" true'
+    'value v "Value" true'
+    'file f "File" true'
+  )
 }
 
 phpConstantChange() {

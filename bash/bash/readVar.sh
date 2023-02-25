@@ -29,16 +29,16 @@ bashReadVar() {
   if [ "${VALUE}" == "" ]; then
     VALUE_FOUND=false
     # Ask user
-    if [ "${ASK}" == true ];then
+    if [ "${ASK}" == true ]; then
       # Description found
-      if [ ! -z ${LABEL+x} ];then
+      if [ ! -z ${LABEL+x} ]; then
         DESC=${LABEL}
       else
         DESC=${KEY}
       fi
 
       # Default value set
-      if [ ! -z ${DEFAULT+x} ];then
+      if [ ! -z ${DEFAULT+x} ]; then
         # Display it in message
         DESC+=" [${DEFAULT}]"
       fi
@@ -53,16 +53,16 @@ bashReadVar() {
     VALUE=${DEFAULT}
   fi
 
-  if [ "${WRITE}" == true ] && [ "${VALUE_FOUND}" == false ];then
+  if [ "${WRITE}" == true ] && [ "${VALUE_FOUND}" == false ]; then
     local CONTENT=""
     # Set description as comment
-    if [ -n "${LABEL+x}" ];then
+    if [ -n "${LABEL+x}" ]; then
       CONTENT+="\n# ${LABEL}"
     fi
     # Use quote as it is a bash file.
     CONTENT+="\n${KEY}=\"${VALUE}\""
     # Append.
-    echo -e ${CONTENT} >> ${FILE}
+    echo -e ${CONTENT} >>${FILE}
   fi
 
   echo ${VALUE}
