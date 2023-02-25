@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 phpConstantChangeArgs() {
+  _DESCRIPTION="Change a value of a constant in a PHP script"
   # shellcheck disable=SC2034
   _ARGUMENTS=(
     'key k "Key" true'

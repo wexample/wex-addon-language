@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 jsonReadValueArgs() {
+  _DESCRIPTION="Read a value from a json file"
   # shellcheck disable=SC2034
   _ARGUMENTS=(
     'file f "File" true'

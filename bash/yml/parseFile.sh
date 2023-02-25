@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 ymlParseFileArgs() {
+  _DESCRIPTION="Parse YML file"
   # shellcheck disable=SC2034
   _ARGUMENTS=(
     'file_yml f "File" true'
